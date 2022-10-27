@@ -1,0 +1,21 @@
+.fadein {
+  opacity: 0;
+  -moz-transition: opacity 1.5s;
+  -webkit-transition: opacity 1.5s;
+  -o-transition: opacity 1.5s;
+  transition: opacity 1.5s;
+}
+
+body.loaded .fadein {
+  opacity: 1;
+}
+
+.add-employee-card {
+  width: 30%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  height: auto;
+  align-self: center;
+  box-shadow: 0 0 2.5em -2em;
+  overflow: hidden;
+}

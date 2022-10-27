@@ -1,0 +1,147 @@
+.dash-infinite-container {
+  padding: 1.5rem 1.5rem;
+  overflow: auto;
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+}
+
+.task-scroll-container {
+  box-shadow: 0 0 2em -1.75em;
+  overflow: auto;
+  border-left: 1px solid #e8e8e8;
+  width: 100%;
+  min-width: 10rem;
+  padding: 0;
+}
+
+.title-text {
+  text-align: center;
+  color: #595959;
+  margin-bottom: 0.25ch;
+  font-size: 1.5vw;
+  padding: 0;
+  font-weight: 500;
+  transition: all;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out;
+}
+
+.inner-card {
+  font-weight: 600;
+  padding: 0.5ch;
+  transition: all;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out;
+}
+
+.badge-wrapper {
+  margin-left: auto;
+}
+
+.inner-card-text {
+  margin-right: auto;
+  text-align: left;
+  font-weight: 600;
+  padding: 0.5ch;
+  color: #bfbfbf;
+  margin-bottom: 0.15ch;
+  transition: all;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out;
+}
+
+.teams-margin-container {
+  height: 100%;
+  text-align: center;
+  margin-top: auto;
+  overflow: hidden;
+}
+
+.team-badge .ant-badge-count {
+  color: #999;
+  background-color: #fff;
+  box-shadow: 0 0 0 1px #d9d9d9 inset;
+}
+[data-theme='dark'] .team-badge .ant-badge-count {
+  background-color: #141414;
+  box-shadow: 0 0 0 1px #434343 inset;
+}
+
+.team-card-container {
+  text-transform: capitalize;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  max-width: 12rem;
+}
+
+.team-card {
+  box-shadow: 0 0 0.55em -0.2em black;
+  color: black;
+  padding: 1ch;
+  min-width: 10rem;
+  margin: 0.5em;
+  border: 1px solid #e8e8e8;
+  border-radius: 10px;
+  box-shadow: 0 0 2.5em -2em;
+  min-width: 11rem;
+  transition: all;
+  transition-duration: 300ms;
+  transition-timing-function: ease;
+}
+
+.card {
+  border-radius: 20px;
+  z-index: 1;
+  transition: all;
+  transition-duration: 300ms;
+  transition-timing-function: ease;
+}
+
+.team-card::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  flex-basis: auto;
+  background-color: #d6e4ff;
+  box-shadow: 0 0 0.55em -0.2em black;
+  border-radius: 20px;
+  opacity: 0.5;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  transform-origin: middle;
+  transform: scaleX(0);
+  box-shadow: 0 0 1rem -1rem;
+  transition: transform 300ms ease;
+  transform-origin: right;
+}
+
+.team-card:hover {
+  border-radius: 10px;
+  transform: scale(105%);
+  cursor: pointer;
+}
+
+.team-card:hover::after {
+  border-radius: 10px;
+  z-index: -1;
+
+  box-shadow: 0 0 0.55em -0.2em black;
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.team-card:hover .title-text {
+  transform: scale(105%);
+  color: #434343;
+}
+
+.team-card:hover .inner-card {
+  transform: scale(105%);
+}
+
+.team-card:hover .inner-card-text {
+  transform: scale(105%);
+  color: #595959;
+}

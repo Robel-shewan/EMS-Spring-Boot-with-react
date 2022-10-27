@@ -1,0 +1,96 @@
+.dash-infinite-container {
+  padding: 1.5rem 1.5rem;
+  overflow: auto;
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+}
+
+.dash-task-list-container {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 1.5rem;
+  overflow: auto;
+  border: 1px solid #e8e8e8;
+  box-shadow: 0 0 2em -1.75em;
+  min-width: 10rem;
+  max-height: 65%;
+  padding: 0;
+}
+
+.team-badge .ant-badge-count {
+  color: #999;
+  background-color: #fff;
+  box-shadow: 0 0 0 1px #d9d9d9 inset;
+}
+[data-theme='dark'] .team-badge .ant-badge-count {
+  background-color: #141414;
+  box-shadow: 0 0 0 1px #434343 inset;
+}
+
+.item {
+  box-shadow: 0 0 1.5em -1em black;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+  border-radius: 4px;
+  font-size: 1em;
+  font-weight: 600;
+  padding: 1ch;
+  color: #8c8c8c;
+  transition: all;
+  transition-duration: 300ms;
+  transition-timing-function: ease;
+}
+
+.task-title-text {
+  border: 1px solid #e8e8e8;
+  border-radius: 10px;
+  padding: 0.25ch;
+  color: #595959;
+  /* margin-bottom: 0.75rem; */
+  /* margin: auto; */
+  margin: 0.5em;
+  font-size: 1.5vw;
+  font-weight: 500;
+}
+
+.task-margin-container {
+  height: 100%;
+  overflow: hidden;
+  border-right: 1px solid #e8e8e8;
+  box-shadow: 0 0 2.5em -2em;
+}
+
+.container {
+  border: 1px solid #e8e8e8;
+  padding: 1em;
+}
+
+.item::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #d6e4ff;
+  opacity: 0.5;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  transform-origin: middle;
+  transform: scaleX(0);
+  box-shadow: 0 0 1rem -1rem;
+  transition: transform 300ms ease;
+  transform-origin: right;
+}
+
+.item:hover {
+  transform: scale(105%);
+  cursor: pointer;
+}
+
+.item:hover::after {
+  box-shadow: 0 0 0.55em -0.2em black;
+  transform: scaleX(1);
+  transform-origin: left;
+}
